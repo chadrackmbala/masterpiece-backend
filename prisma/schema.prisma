@@ -27,6 +27,7 @@ model Users {
   motDePasse String @unique
   comfirmMotDePasse String @unique
   adresse String
+  telephone String
   role Role
   participation  Participation[]
 }
