@@ -3,9 +3,26 @@ const bcrypt = require('bcrypt');
 const prisma = new PrismaClient();
 
 const getUsers = async (req, res, next) => {
+    const userData = [
+        {
+            nom: "Doe",
+            postnom: "Smith",
+            prenom: "John",
+            universite: "Université XYZ",
+            faculte: "Faculté des sciences",
+            departement: "Informatique",
+            promotion: "Promotion 2024",
+            email: "john.doe@example.com",
+            telephone: "123456789",
+            adresse: "123 Rue de l'Université",
+            role: "étudiant",
+            motDePasse: "motdepasse123",
+            comfirmMotDePasse: "motdepasse123"
+        }
+    ];
     try {
         const users = await prisma.users.findMany();
-        res.status(200).json({ users });
+        res.status(200).json({ userData });
     } catch (error) {
         res.status(500).json({ error });
     }
