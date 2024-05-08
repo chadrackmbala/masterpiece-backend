@@ -24,8 +24,21 @@ const PORT = process.env.PORT;
 server.post('/auth', authCtrl);
 server.post("/users", postUsers);
 // protected routes
-server.use(verifyJwt)
 server.get("/users", getUsers);
+server.use(verifyJwt)
+server.get("/events", getUsers);
+server.get("/profile", getUsers);
+server.get("/clubs", getUsers);
+server.get("/medecine", getUsers);
+server.get("/law", getUsers);
+server.get("/computer-science", getUsers);
+server.get("/economy", getUsers);
+server.get("/administration", getUsers);
+server.get("/admin", getUsers);
+server.get("/update-data", getUsers);
+server.get("/admin", getUsers);
+server.get("/home", getUsers);
+
 
 server.post("/activites", findUserByEmail);
 
