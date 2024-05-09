@@ -18,7 +18,7 @@ server.use(cors());
 
 server.use(express.json());
 dotenv.config();
-const PORT = process.env.PORT;
+const PORT = 3000;
 
 // public routes
 server.post('/auth', authCtrl);
