@@ -21,10 +21,10 @@ dotenv.config();
 const PORT = 3000;
 
 // public routes
-server.post('/auth', authCtrl);
 server.post("/users", postUsers);
 // protected routes
 server.get("/users", getUsers);
+server.post('/auth', authCtrl);
 server.use(verifyJwt)
 server.get("/events", getUsers);
 server.get("/profile", getUsers);
