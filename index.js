@@ -25,7 +25,7 @@ server.post("/users", postUsers);
 // protected routes
 server.get("/users", getUsers);
 server.post('/auth', authCtrl);
-server.use(verifyJwt)
+server.use(verifyJwt);
 server.get("/events", getUsers);
 server.get("/profile", getUsers);
 server.get("/clubs", getUsers);
@@ -38,7 +38,6 @@ server.get("/admin", getUsers);
 server.get("/update-data", getUsers);
 server.get("/admin", getUsers);
 server.get("/home", getUsers);
-
 
 server.post("/activites", findUserByEmail);
 
